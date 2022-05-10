@@ -146,28 +146,27 @@ function generateReplacment(text) {
         "Hot Dog Casing",
         "Cheese Grit",
         "Covfefe",
-        "Malfunctioning Dalek",
+        "Malfunctioning Rusty Dalek",
         "Russian Poodle",
         "Beelzebub",
         "Rum Ham",
-        "Abradolf Lincler",
         "Leaning Tower Of Cheeza",
         "Trumpy McTrumpface",
         "Dumpster Fire",
-        "SCROTUS",
+        "Former SCROTUS",
         "Annoying Orange",
-        "Jizz Trumpet",
-        "Bagpipe"
+        "Bagpipe",
+        "Cheeto Face"
     ];
 
     // TODO: perform with a single replace command
-    return text.replace(regex, getName()).replace("Trump", "Drumpf");
+    return text.replace(regex, getName()).replace("Trump", "'Drumpf'").replace("trump", "'Drumpf'");
 
     function getName() {
         var prefix = getRandomElement(prefixAdjectives);
         var suffix;
         do suffix = getRandomElement(adjectives); while(suffix === prefix);
-        return prefix + " " + suffix + " " + getRandomElement(nouns);
+        return "'" + prefix + " " + suffix + " " + getRandomElement(nouns) + "'";
     }
 
     function getRandomElement(array) {
